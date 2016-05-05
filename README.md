@@ -1,17 +1,11 @@
-# rails-vue
-
-rails-vue adds support for vue components (`.vue` files) to rails. In development environment, it provides hot-reloading of components via browserify-hmr. In production, it compiles them to CSS and JS during the asset compile step.
-
-# Get started
-
-First, install the development dependencies
+Development dependencies
 
     npm install vue pug coffee-script watchify vueify browserify browserify-hmr vueify-insert-css vue-hot-reload-api babel-core babel-preset-es2015 babel-plugin-transform-runtime babel-runtime@6 --save-dev
 
-Add the gem to your Gemfile (doesn't exist yet).
+Compile for development (with hot-module-replacement)
 
-    gem 'rails-vue'
+    watchify -vd -p browserify-hmr -t vueify -e app/assets/components/index.js -o app/assets/javascripts/components.dev.js
     
-Now you can place your `.vue` components into `app/assets/components`.
+Compile for production
 
-That's it.
+    browserify -t vueify -e app/assets/components/index.js -o app/assets/javascripts/components.dist.js
