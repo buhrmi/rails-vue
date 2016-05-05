@@ -6,7 +6,7 @@ rails-vue adds support for vue components (`.vue` files) to rails. In developmen
 
 First, install the development dependencies
 
-    npm install vueify browserify browserify-hmr vueify-insert-css vue-hot-reload-api babel-core babel-preset-es2015 babel-plugin-transform-runtime babel-runtime@6 --save-dev
+    npm install watchify vueify browserify browserify-hmr vueify-insert-css vue-hot-reload-api babel-core babel-preset-es2015 babel-plugin-transform-runtime babel-runtime@6 --save-dev
 
 Add the gem to your Gemfile (doesn't exist yet).
 
