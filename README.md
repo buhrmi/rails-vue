@@ -10,7 +10,7 @@ First, install the development dependencies
 
 Add the gem to your Gemfile (doesn't exist yet).
 
-    rails-vue
+    gem 'rails-vue'
     
 Now you can place your `.vue` components into `app/assets/components`.
 
